@@ -253,16 +253,19 @@ section#reviews {
 }
 
 section#reviews .row p{
- font-size: 16px;
+ font-size: 25px;
+ font-style: bold;
   color: #ffffff;
+  margin-top: 50px;
   margin-bottom : 20px;
   margin-left: 30px;
 
 }
 
 section#reviews .row img{
-
+ margin-top: 150px;
   margin-left: 30px;
+  margin-bottom: 30px;
   
 }
 section#reviews .review-filtering {

@@ -253,16 +253,19 @@ section#reviews {
 }
 
 section#reviews .row p{
- font-size: 16px;
+ font-size: 25px;
   color: #ffffff;
-  margin-bottom : 20px;
+  font-style: bold;
+  margin-bottom : 40px;
   margin-left: 30px;
 
 }
 
 section#reviews .row img{
 
+margin-top: 20px;
   margin-left: 30px;
+   margin-bottom: 20px;
   
 }
 section#reviews .review-filtering {
@@ -1002,6 +1005,13 @@ section#support .media:hover h3 {
   color: #66cdcc;
 }
 
+section#support .row p{
+ font-size: 18px;
+  color: #000000;
+  margin-bottom: 20px;
+
+}
+
 
 section#trouble {
   -webkit-background-size: cover;
@@ -1011,10 +1021,11 @@ section#trouble {
 }
 
 section#trouble .row p{
- font-size: 16px;
+ font-size: 18px;
   color: #000000;
   
   text-align: left;
+  margin-bottom: 20px;
 
 }
 
@@ -1037,9 +1048,10 @@ section#trouble1 {
 }
 
 section#trouble1 .row p{
- font-size: 16px;
+ font-size: 18px;
   color: #000000;
   text-align: left;
+  margin-bottom: 20px;
 
 }
 
@@ -1061,9 +1073,10 @@ section#trouble2 {
 }
 
 section#trouble2 .row p{
- font-size: 16px;
+ font-size: 18px;
   color: #000000;
   text-align: left;
+  margin-bottom: 20px;
 
 }
 
