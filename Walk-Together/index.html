@@ -56,6 +56,7 @@
                         </button>
                         <a class="navbar-brand" href="index.html">
                             <img src="assets/img/freeze/walking_app.png" alt="" class="logo">
+
                         </a>
                     </div>
 
@@ -108,7 +109,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/freeze/iphone-freeze.png" alt="">
+                            <img src="assets/img/freeze/V20.png" alt="" width="260px" height="480">
                         </div>
 
                         <div class="tp-caption customin customout visible-xs"
@@ -121,7 +122,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/freeze/iphone-freeze.png" alt="">
+                            <img src="assets/img/freeze/V20.png" alt="" width="260px" height="480">
                         </div>
 
                         <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
@@ -173,7 +174,7 @@
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">장소 검색기능</h3>
-                                <p> 지도 리스트 직접검색 3가지의 장소 검색 기능</p>
+                                <p>지도 리스트 직접검색 3가지의 장소 검색 기능</p>
                                 
                             </div>
                         </div>
@@ -183,7 +184,7 @@
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">장소별 게시판</h3>
-                                <p> 장소마다 소통과 즐거움을 표현할 수 있는 게시판</p>
+                                <p>장소마다 소통과 즐거움을 표현할 수 있는 게시판  </p>
                              
                             </div>
                         </div>
@@ -200,7 +201,7 @@
                        
                     </div>
                     <div class="col-md-4 col-sm-4" >
-                        <img src="assets/img/freeze/iphone-freeze.png" class="img-responsive scrollpoint sp-effect5" alt="">
+                        <img src="assets/img/freeze/V20.png" class="img-responsive scrollpoint sp-effect5" alt="" width="260" height="480">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
@@ -526,7 +527,7 @@
                         
                            <h3> 1. Firebase Database 사용으로 인한 쿼리의 제약</h3>
                            <br>
-                            <p> --> 파이어베이스를 서버로 사용 </p>
+                            <p> --> 처음엔 파이어베이스를 서버로 사용 </p>
 
                             <p> --> 사용자 반경 1km내의 장소들을 보여주는 기능 제작</p>
 
@@ -539,8 +540,9 @@
                            <p> --> MariaDB 쿼리로 해결</p>
                            <br>
                         
-                            <strong> <p>느낀점 </p></strong>
-                           <p>파이어베이스의 JSON을 RDBMS로 바꾸고, express과 retrofit으로 http method를 만들고, 다시 장소 정보들을 서버에 이전하는 등 해본 적 없던 작업들을 하면서 처음부터 필요한 기능에 대한 설계를 재대로 해야 한다는 것을 알게 되었습니다. </p>
+                            <strong> 느낀점 </strong>
+                            <br>
+                           <p>처음 설계와 요구조건을 잘 파악하여 필요한 기술을 적용시켜야 한다는 것을 깨달았습니다.  </p>
 
                           
                           
@@ -584,10 +586,12 @@
                             <p> --> 산책 시작시 새로운 지도 객체 생성 : 실패!!! </p>
                             <strong> <p> 2. FueseLocationProvider의 맴버변수 사용 문제</p> </strong>
                             <p> --> 라인은 새로 그려지나, Location 서버스의 해제가 불가능</p>
-                            <strong> <p> 3. 코드를 살펴보고 라인을 그리는 PolylineOptions 객체에 계속 덮어 씌우는걸 확인</p> </strong>
+                            <strong> <p> 3. 코드를 살펴보고 라인을 그리는 맴버변수로 선언된 PolylineOptions 객체에 계속 덮어 씌우는걸 확인</p> </strong>
                             <p> --> 새로 시작시 PolylineOptions를 다시 생성하여 해결</p>
-                            <strong><p>느낀점  </p>  </strong>
-                            <p>이로 인해 객체 사용시 자주 쓰는 건지 아닌지 한번만 생성해서 계속 쓸지 잘 판단해서 선언해야 한다는 것을 알게 되었습니다.</p>
+                            <strong> 느낀점    </strong>
+                            <br>
+                            <p>변수 선언의 간단한 문제였지만 4~5시간 걸려 해결했던 문제였습니다. </p>
+                            <p> 제가 어떤 용도로 객체와 변수를 쓸지 잘 파악하고 선언해야 함을 알게 되었습니다.  </p>
                           
                      </div>
                  </div>
@@ -625,13 +629,16 @@
                             <strong>   <p> 1. 비동기로 가져오는 enqueue의 콜백 함수에 다른 데이터의 enqueue </p> </strong> 
                             <p> --> 잘 동작 하나 코드가 길어져서 알아보기가 힘듬 </p>
                             <strong>  <p> 2. Asynctask에서 무한루프를 돌려 enqueue로 얻어오는 데이터 체크 후 반영 </p> </strong>
-                            <p> --> 데이터가 안 올시 Asynctask가 무한루프 돌고 메모리 부족시 아예 Asyntask가 실행이 안됨 코드는 짧아짐</p>
+                            <p> --> 데이터가 안 올시 안 온 데이터를 다시 받는 과정을 넣지 않았기에 Asynctask가 무한루프 </p>
                             <strong>  <p> 3. Asynctask에서 execute를 통해 가져오기</p>  </strong> 
                             <p> --> 코드도 짧아지고 잘 동작 하나 상대적으로 느림</p>
                             <strong> <p> 4. 서버에서 join 으로 묶어서 한번에 보내고 받기</p> </strong>
-                            <p> --> 잘 동작하고 코드도 짧아짐 서버쪽 지식이 없기 때문에 서버의 부하가 가는지는 의문 </p>
-                            <strong>    <p> 느낀점</p>  </strong>
-                            <p> 현재 앱 상에 4가지 방법이 다 쓰이고 있는데 각자 장단점이 있는거 같아서 나중에 사용시에 잘 고려해봐야 겠다고 생각했습니다.</p>
+                            <p> --> 잘 동작하고 코드도 짧아짐, 앱 단에서는 가장 효율적인거 같음. </p>
+                            <strong>    느낀점  </strong>
+                            <br>
+                            <p> 다양한 방법을 시도해 보았기에 기억에 남는 트러블 슈팅이었습니다. </p>
+                            <p> 여러 방법을 생각하며 구현하고 동작하는지 확인하는 과정은 힘들었지만</p>
+                            <p> 마지막에 잘 돌아가는 모습을 볼땐 보람을 느꼈습니다.</p>
 
                      </div>
                  </div>
@@ -648,29 +655,29 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 scrollpoint sp-effect1">
-                            <h2> 느낀점 </h2>
-                                <p>부스트캠프 전에는 안드로이드 개발자가 되고 싶지만 뭘 어떻게 해야할지를 몰라서 공부를 안 했습니다. </p>
-                                <p>따라서 부스트캠프를 통해 얻어 가는 것 중 가장 큰 것은 공부하는 법을 배운 것이라 생각합니다.</p>
-                                <p>튜터님들과 주변 학생들을 통해 어떤 식으로 공부해 나가야 하는지 알게 되었습니다. </p>
-                                <p>이제 부스트캠프를 통해 습득한 공부하는 방법을 통해 수강 전의 게임만 하는 저로 다시 돌아가지 않고 부스트캠프 이후 새로운 제 자신을 만들어 가겠습니다.</p>
+                            <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
+                            
+                               <h2> 부스트 캠프 이전 </h2>
 
-
+                               <p> 1. 공부하는 법을 몰라서 재미도 없고 하기 싫었습니다. </p>
+                               <p> 2. 무엇을 공부해야 할 지 몰랐습니다.</p>
+                               <p> 3. 도전해 보고 싶은게 없었습니다.</p>
 
                             </div>
 
+                            <div class="col-md-4 col-sm-4 scrollpoint sp-effect1"> 
+                            <img src="assets/img/freeze/tech/right.jpg" alt="" width="150" height="150">
 
-                            <div class="col-md-6 col-sm-6 contact-details scrollpoint sp-effect2">
-                               <h2>보완점</h2>
-                                 <p> 1. 용량 큰 사진을 서버에 그냥 올리고 그걸 그냥 가져와서 터지는 문제</p>
+                            </div>
 
-                                 <p> 2. 리사이클러 뷰 페이징</p>
+                            <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
 
-                                 <p> 3. 게시글 삭제 댓글 삭제 기능</p>
+                                <h2> 부스트 캠프 이후 </h2>
+                                <p> 1. 튜터님들과 주변 학생들을 통해 어떤식으로 공부할지 알게 되어 재미를 느끼게 되었습니다.</p>
+                                <p> 2. 다음 목표로 디자인 패턴과 이미지처리를 공부 할 것 입니다.</p>
+                                <p> 3. 저만의 개인 알람앱을 만들어 보고 싶습니다.</p>
+                                
 
-                                 <p> 4. 게시글 필터링 및 검색</p>
-
-                                 <p> 5. 산책일지 작성 중 노티</p>
                             </div>
                         </div>
                     </div>

@@ -1006,10 +1006,15 @@ section#support .media:hover h3 {
 }
 
 section#support .row p{
- font-size: 18px;
+ font-size: 22px;
   color: #000000;
   margin-bottom: 20px;
 
+}
+
+section#support .row img{
+
+  margin-left: 90px;
 }
 
 
@@ -1035,6 +1040,14 @@ section#trouble .row img{
   margin-left: 50px;
   margin-bottom: 30px;
   
+}
+
+section#trouble .row strong{
+
+  font-size : 25px;
+  color: #000000;
+  margin-bottom: 25px;
+
 }
 
 
@@ -1064,6 +1077,16 @@ margin-top: 100px;
 }
 
 
+section#trouble1 .row strong{
+
+  font-size : 25px;
+  color: #000000;
+  margin-bottom: 25px;
+
+}
+
+
+
 section#trouble2 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1087,6 +1110,15 @@ margin-top: 100px;
   margin-bottom: 50px;
   
 }
+
+section#trouble2 .row strong{
+
+  font-size : 25px;
+  color: #000000;
+  margin-bottom: 25px;
+
+}
+
 /* footer section */
 footer {
   background: #66cdcc;
