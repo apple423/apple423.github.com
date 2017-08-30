@@ -52,6 +52,9 @@ header .navbar-default {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
+
+
 header .navbar-default ul.navbar-nav {
   padding-top: 55px;
 }
@@ -114,6 +117,7 @@ header .navbar-default ul.navbar-nav li a.getApp:after {
 }
 header .navbar-default ul.navbar-nav li a:focus {
   color: #ffffff;
+
 }
 header .navbar-default .navbar-brand {
   height: auto;
@@ -137,6 +141,20 @@ header .navbar-default.scrolled .navbar-brand {
 header .navbar-default.scrolled .navbar-brand img {
   width: auto;
   max-height: 33px;
+}
+
+header .navbar-default .navbar-brand p{
+
+  color: #ffffff;
+  font-size: 25px;
+
+}
+
+header .navbar-default.scrolled .navbar-brand p {
+
+  font-size: 20px;
+  color: #ffffff;
+
 }
 header .navbar-default.scrolled ul.navbar-nav {
   padding-top: 15px;
